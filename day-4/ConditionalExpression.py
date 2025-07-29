@@ -4,11 +4,14 @@
 #Types of conditional expressions are : if, elif, else, and, or, not, in, not in, is, is not, ==, !=, >, <, >=, <=
 
 #in operator : The in operator is used to check if a value is present in a sequence (list, tuple, string) or dictionary.
+
 #not in operator : The not in operator is used to check if a value is not present in a sequence (list, tuple, string) or dictionary.
+
 #is operator : The is operator is used to check if two variables refer to the same object.
+
 #is not operator : The is not operator is used to check if two variables do not refer to the same object.
 
-#Example 1 
+#Example 1
 # This function checks a student's attendance and marks status.
 # Parameters:
 # - name: the name of the student (string)
@@ -21,3 +24,25 @@
 # 3. If the student is not in the list → "Absent"
 # Additionally, if the name refers to the same object as the first student in the list (using 'is'),
 # append " (Same Object)" to the message.
+
+# Input from the user
+name = input("Enter the name of the student: ")
+marks = int(input("Enter the marks obtained by the student: "))
+
+# List of students who are present
+present_students = ["John", "Jane", "Jack", "Jill"]
+
+# Function to check student status
+def check_student_status(name, marks, present_students):
+    if name in present_students:
+        message = "Pass and Present" if marks >= 50 else "Fail but Present"
+    else:
+        message = "Absent"
+
+    if name is present_students[0]:
+        message += " (Same Object)"
+
+    return message
+
+# Display the result
+print(check_student_status(name, marks, present_students))
