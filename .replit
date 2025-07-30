@@ -1,4 +1,4 @@
-entrypoint = "LogicalOperator.py"
+entrypoint = "Forloop.py"
 modules = ["python-3.11"]
 
 [nix]
@@ -11,5 +11,5 @@ language = "python3"
 requiredFiles = [".replit", "replit.nix"]
 
 [deployment]
-run = ["python3", "LogicalOperator.py"]
+run = ["python3", "Forloop.py"]
 deploymentTarget = "cloudrun"
