@@ -1,7 +1,6 @@
 modules = ["python-3.11"]
 
 [deployment]
-run = ["python3", "PatternProblems.py"]
 deploymentTarget = "cloudrun"
 
 [nix]
