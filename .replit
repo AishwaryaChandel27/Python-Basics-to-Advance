@@ -8,3 +8,15 @@ channel = "stable-23_05"
 
 [run]
 command = "python3 PatternProblems.py"
+
+[workflows]
+runButton = "Run PatternProblems"
+
+[[workflows.workflow]]
+name = "Run PatternProblems"
+author = 46164587
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 PatternProblems.py"
