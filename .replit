@@ -1,26 +1,11 @@
 modules = ["python-3.11"]
 
-[nix]
-channel = "stable-25_05"
-
-[unitTest]
-language = "python3"
-
-[gitHubImport]
-requiredFiles = [".replit", "replit.nix"]
-
 [deployment]
-run = ["python3", "PracticeWhileLoop.py"]
+run = ["python3", "PatternProblems.py"]
 deploymentTarget = "cloudrun"
 
-[workflows]
-runButton = "Run"
+[nix]
+channel = "stable-23_05"
 
-[[workflows.workflow]]
-name = "Run"
-author = 46164587
-mode = "sequential"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "python3 PracticeWhileLoop.py"
+[run]
+command = "python3 PatternProblems.py"
